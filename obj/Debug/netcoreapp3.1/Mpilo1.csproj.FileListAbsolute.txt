@@ -165,3 +165,9 @@ C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Mpilo1.cspro
 C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Mpilo1.dll
 C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Mpilo1.pdb
 C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Mpilo1.genruntimeconfig.cache
+C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Mpilo1.csproj.AssemblyReference.cache
+C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Create.cshtml.g.cs
+C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Delete.cshtml.g.cs
+C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Details.cshtml.g.cs
+C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Edit.cshtml.g.cs
+C:\Users\Geeks4Learning\source\repos\Mpilo1\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Index.cshtml.g.cs

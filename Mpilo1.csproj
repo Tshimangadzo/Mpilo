@@ -6,22 +6,25 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="wwwroot\Uploads\**" />
+	  <Content Remove="wwwroot\Uploads\**" />
+	  <EmbeddedResource Remove="wwwroot\Uploads\**" />
+	  <None Remove="wwwroot\Uploads\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="ExcelDataReader" Version="3.6.0" />
 		<PackageReference Include="LumenWorksCsvReader" Version="3.8.2" />
 		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.28" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.28" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.28" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.25" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.25">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.30" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.30">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
 		<PackageReference Include="PagedList.Mvc" Version="4.5.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="wwwroot\Uploads\" />
 	</ItemGroup>
 
 </Project>

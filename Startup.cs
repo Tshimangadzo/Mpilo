@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Mpilo1.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mpilo1
 {
@@ -24,6 +26,9 @@ namespace Mpilo1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<MpiloContext>(options =>
+             options.UseSqlServer(Configuration.GetConnectionString("Connectionstring")));
+            services.AddMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +51,7 @@ namespace Mpilo1
 
             app.UseAuthorization();
 
+           
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

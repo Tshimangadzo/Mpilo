@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Mpilo1.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div style="margin-bottom:20px">
+    <a asp-action="Create" class="btn btn-success">Create customer</a>
+    <form class="float-right" method="post" asp-action="Index">
+        <input placeholder="Search value" name="searchValue" />
+        <select name="searchColunm">
+            <option value="">Search by</option>
+            <option value="Name">Id</option>
+            <option value="Name">Name</option>
+            <option value="Surname">Surname</option>
+            <option value="Email">Email</option>
+            <option value="PhoneNumber">Phone number</option>
+            <option value="ZipCode">Zip code</option>
+            <option value="City">City</option>
+        </select>
+        <input type="submit" class="btn btn-primary" name="Search" value="Search">
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+        
+            <th>
+                @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Surname", "Index", new { sortOrder = ViewBag.SurnameSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Email", "Index", new { sortOrder = ViewBag.EmailSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Phone number", "Index", new { sortOrder = ViewBag.PhoneNumberSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Zip code", "Index", new { sortOrder = ViewBag.ZipCodeSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("City", "Index", new { sortOrder = ViewBag.CitySortParm })
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
